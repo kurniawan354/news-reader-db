@@ -1,0 +1,153 @@
+*{
+    box-sizing: border-box;
+}
+    body {font-family: Arial, Helvetica, sans-serif;}
+
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.9);
+}
+
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.userView{
+    visibility:hidden ;
+    
+}
+.JumboTron{
+    height: 650px;
+    font-size: 20px;
+    padding: 60px;
+    background-image:url('/background1.jpg');
+    text-align: center;
+    color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1.textSimple{
+    text-align: center;
+    position: relative;
+}
+.SideNav{
+    display: none;
+}
+.column {
+    float: left;
+    width: 33.3333333333%;
+    padding: 0 10px;
+   
+  }
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+  }
+ 
+  
+
+
+
+@media only screen and (max-width:600px){
+    .userView{
+        background-image: url('/Android-Nexus-5-Lollipop-wallpaper-5.png');
+        margin-top: -3rem;
+         height: 17rem;
+    }
+    .namecover{
+        visibility:visible;
+    }
+    .userView{
+        visibility: visible;
+    }
+    .JumboTron{
+        height: 770px;
+    }
+    .textSimple{
+        margin-top:60px
+    }
+    .SideNav{
+       display: inline;
+    }
+    .column{
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+    .modal-content {
+      width: 100%;
+    }
+}
